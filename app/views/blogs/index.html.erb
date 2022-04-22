@@ -17,7 +17,7 @@
       <tr>
         <td><%= blog.title %></td>
         <td><%= blog.content %></td>
-        <% if @user.avatar.attached? %>
+        <% if blog.thumbnail.attached? %>
           <td><%= image_tag blog.thumbnail.variant(resize_to_limit: [200, 200]) %></td>
         <% end %>
         <td><%= link_to 'Show', blog %></td>
